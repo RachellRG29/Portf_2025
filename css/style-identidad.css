@@ -1,0 +1,47 @@
+
+
+.subt{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.numeros{
+    font-family: 'Comfortaa';
+    font-size: 20px;
+}
+
+.p-ed{
+    font-family: 'Comfortaa';
+    font-size: 18.5px;
+    background-color: #D8F8B7;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.p-pe{
+    font-family: 'Comfortaa';
+    font-size: 18.5px;
+    background-color: #FF9A8C;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+/*-------------LOGO QUINTESSENCE------------------ */
+.logo-quintessence{
+    display: block;
+    justify-content: center;
+}
+
+.img-portada-q{
+    width: 100%;
+}
+
+/*-------------LOGO VEGANIMO------------------ */
+.logo-veganimo{
+    display: block;
+    justify-content: center;
+}
+
+.img-portada-q{
+width: 100%;
+}

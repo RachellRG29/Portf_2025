@@ -1,0 +1,39 @@
+.portada {
+  background-color: #211d25;
+  width: 100%;
+  aspect-ratio: 16 / 9; 
+  
+  background-image: url("/images/portapc.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .portada {
+    aspect-ratio: 9 / 16;
+    margin-top: -3rem;
+    margin-bottom: -3rem;
+    background-image: url("/images/portacel.png");
+  }
+}
+
+/*Enfoques con animacion infinita*/
+#enfoques{
+  font-family: 'Comfortaa';
+  padding:26px 6%;
+  overflow:hidden;
+  position:relative;
+  margin-top:18px;
+  border-radius:12px;
+  background:linear-gradient(180deg, 
+  rgba(241, 172, 204, 0.804)
+  rgba(253, 239, 255, 0.625)) !important;
+
+  backdrop-filter:blur(6px);
+  border:1px solid rgba(255,255,255,0.08)
+}
+.aff-track{display:flex;gap:48px;align-items:center;white-space:nowrap;animation:marq 20s linear infinite}
+.aff-item{opacity:0.9;font-weight:700;color: #46295d;font-size:18px}
+@keyframes marq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
