@@ -3,7 +3,7 @@
     width: 100%;
     aspect-ratio: 16 / 9; 
     
-    background-image: url("images/contenidos.png");
+    background-image: url("../images/contenidos.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -38,7 +38,7 @@
     .contenido-orden {
         aspect-ratio: 9 / 16;
         margin-top: 3rem;
-        background-image: url("images/contenidos-cel.png");
+        background-image: url("../images/contenidos-cel.png");
         margin-bottom: 1rem;
     }
 
