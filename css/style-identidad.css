@@ -23,7 +23,7 @@
 .p-ed{
     font-family: 'Comfortaa';
     font-size: 18.5px;
-    background-color: #D8F8B7;
+    background-color: #b7e7f8;
     padding: 5px 10px;
     border-radius: 20px;
 }
@@ -31,7 +31,15 @@
 .p-pe{
     font-family: 'Comfortaa';
     font-size: 18.5px;
-    background-color: #FF9A8C;
+    background-color: #ff9696;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.p-co{
+    font-family: 'Comfortaa';
+    font-size: 18.5px;
+    background-color: #D8F8B7;
     padding: 5px 10px;
     border-radius: 20px;
 }
@@ -52,5 +60,13 @@
 }
 
 .img-portada-q{
-width: 100%;
+    width: 100%;
+}
+
+
+
+@media (max-width: 768px) {
+    .info-identidad{
+        display: block;
+    }
 }

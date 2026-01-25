@@ -1,0 +1,19 @@
+.info-pagina{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 30px;
+
+    font-family: 'Comfortaa';
+}
+
+.btn-llstudios{
+    
+}
+
+
+@media (max-width: 768px) {
+    .info-pagina{
+        display: block;
+    }
+}
