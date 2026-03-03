@@ -6,3 +6,64 @@
 
     font-family: 'Comfortaa';
 }
+
+/*ilustraciones veganimo*/
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 25px;
+        max-width: 1200px;
+        margin: auto;
+        font-family: 'Comfortaa';
+    }
+
+    .card {
+        background: white;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+        transition: 0.3s ease;
+        cursor: pointer;
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .card-img {
+        width: 100%;
+        aspect-ratio: 1 / 1; /* Imagen cuadrada */
+        overflow: hidden;
+    }
+
+    .card-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.4s ease;
+    }
+
+    .card:hover img {
+        transform: scale(1.05);
+    }
+
+    .card-text {
+        padding: 15px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 600;
+        color: #333;
+    }
+
+    @media (max-width: 900px) {
+        .grid-container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .grid-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
