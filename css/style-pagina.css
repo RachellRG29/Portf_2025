@@ -7,9 +7,48 @@
     font-family: 'Comfortaa';
 }
 
-.btn-llstudios{
-    
+/*Boton redirigir a pagina l&l studios*/
+.btn-llstudios {
+  margin-top: 2.5rem !important;
+  cursor: pointer;
+  font-weight: 700;
+  max-width: 200px;
+  font-family: 'Comfortaa';
+  transition: all 0.2s;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: #d93030;
+  border: 1px solid transparent;
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+  align-items: center;
+  font-size: 15px;
 }
+
+.btn-llstudios:hover {
+  background: linear-gradient(#d93030, #ef8e3d);
+  transition: transform 0.3s ease-in;
+}
+
+.text {
+  color: #fff;
+}
+
+.btn-llstudios > svg {
+  width: 34px;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn-llstudios:hover svg {
+  transform: translateX(5px);
+}
+
+.btn-llstudios:active {
+  transform: scale(0.95);
+}
+
 
 
 @media (max-width: 768px) {
