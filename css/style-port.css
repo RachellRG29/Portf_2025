@@ -1,9 +1,9 @@
 .portada {
-  background-color: #211d25;
+  /*background-color: #211d25;*/
   width: 100%;
   aspect-ratio: 16 / 9; 
   
-  background-image: url("../images/portapc.png");
+  background-image: url("../images/img-port-pc-2025.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -14,7 +14,7 @@
     aspect-ratio: 9 / 16;
     margin-top: -3rem;
     margin-bottom: -3rem;
-    background-image: url("../images/portacel.png");
+    background-image: url("../images/img-port82025-cel.png");
   }
 }
 
