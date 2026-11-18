@@ -1,0 +1,53 @@
+:root {
+    --blue: #91A7D0;
+    --blue-soft: #DCE5F4;
+    --grid: #E6ECF7;
+    --navy: #393D7E;
+    --navy2: #1C2745;
+    --amber: #F5C45E;
+    --white: #fff;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 16px
+}
+
+body {
+    margin: 0;
+    background: var(--navy);
+    color: var(--white);
+    font: 400 1.05rem/1.65 "DM Sans", system-ui, sans-serif
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Bodoni Moda", Didot, Georgia, serif;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0
+}
+
+a {
+    color: inherit
+}
+
+:focus-visible {
+    outline: 3px solid var(--amber);
+    outline-offset: 3px;
+    border-radius: 6px
+}
+
+.wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px
+}

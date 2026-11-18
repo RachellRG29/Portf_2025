@@ -1,0 +1,304 @@
+/* PROYECTOS */
+
+.work {
+    padding: 40px 0 96px;
+}
+
+.work h2 {
+    font-size: clamp(2.8rem, 9vw, 6rem);
+    margin-bottom: 56px;
+}
+
+/* ESTRUCTURA GENERAL */
+
+.proj {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+
+    /* IMAGEN IZQUIERDA - TEXTO DERECHA */
+    grid-template-areas:
+        "slot info"
+        "thumbs thumbs";
+
+    gap: 40px;
+    align-items: center;
+
+    padding: 40px 0;
+    border-top: 1px solid rgba(145, 167, 208, .3);
+}
+
+/* ALTERNAR PROYECTOS */
+/* TEXTO IZQUIERDA - IMAGEN DERECHA */
+
+.proj:nth-of-type(even) {
+    grid-template-columns: .9fr 1.1fr;
+
+    grid-template-areas:
+        "info slot"
+        "thumbs thumbs";
+}
+
+/* ASIGNACIÓN DE ÁREAS */
+
+.proj .slot {
+    grid-area: slot;
+}
+
+.proj .project-info {
+    grid-area: info;
+}
+
+.proj .thumbs {
+    grid-area: thumbs;
+    width: 100%;
+    min-width: 0;
+}
+
+/* IMAGEN PRINCIPAL */
+
+.slot {
+    display: block;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    border: 0;
+    padding: 0;
+    margin: 0;
+
+    overflow: hidden;
+    background: var(--navy2);
+    border-radius: 24px;
+}
+
+.slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/**/
+.slot-ver-big {
+    display: block;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 6/12;
+    border: 0;
+    padding: 0;
+    margin: 0;
+
+    overflow: hidden;
+    background: var(--navy2);
+    border-radius: 24px;
+}
+
+.slot-ver-semi {
+    display: block;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 8/10;
+}
+
+.slot-hor-semi {
+
+    display: block;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 12/6;
+
+}
+
+.slot video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 1s cubic-bezier(.2, .8, .2, 1);
+}
+
+/* INFORMACIÓN Y ETIQUETAS */
+
+.project-tags {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.tag {
+    display: block;
+    color: var(--blue);
+    font-size: .85rem;
+    margin: 0;
+}
+
+.tag.dark {
+    color: var(--navy);
+    opacity: .6;
+}
+
+/* CATEGORÍA DEL PROYECTO */
+
+.tag-tipo {
+    display: block;
+    right: 0 !important;
+    font-size: .90rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 50px;
+    line-height: 1.2;
+}
+
+/* COLORES POR CATEGORÍA */
+
+.tag-tipo.educativo {
+    background: #DCEBFF;
+    color: #2456A6;
+}
+
+.tag-tipo.ilustracion {
+    background: #F2DDFB;
+    color: #873FA1;
+}
+
+.tag-tipo.personal {
+    background: #FFE0E8;
+    color: #AC3F61;
+}
+
+.proj h3 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    margin-bottom: 14px;
+}
+
+.proj p {
+    color: var(--blue-soft);
+    margin: 0 0 22px;
+    max-width: 26em;
+}
+
+
+
+/* INDICADOR */
+
+.chg {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    background: var(--amber);
+    color: var(--navy);
+    font-size: .78rem;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.slot:hover .chg,
+.slot:focus-visible .chg {
+    opacity: 1;
+}
+
+/* MINIATURAS */
+
+.shot {
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+
+    background-image:
+        var(--img, none),
+        linear-gradient(135deg, var(--peach-soft), var(--peach));
+
+    background-size: cover;
+    background-position: center;
+
+    transition: transform .8s cubic-bezier(.2, .8, .2, 1);
+}
+
+.shot img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* MINIATURAS */
+
+.thumbs {
+    grid-area: thumbs;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+    width: 100%;
+    min-width: 0;
+}
+
+/* CADA IMAGEN */
+
+.thumbs .shot {
+    width: 100%;
+    min-width: 0;
+    aspect-ratio: 4 / 3;
+
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+/* IMÁGENES */
+
+.thumbs .shot img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* VIDEOS */
+
+.shot video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 1s cubic-bezier(.2, .8, .2, 1);
+}
+
+/* RESPONSIVE */
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .proj,
+    .proj:nth-of-type(even) {
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "slot"
+            "info"
+            "thumbs";
+
+        gap: 24px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .thumbs {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+}

@@ -1,0 +1,179 @@
+/* contacto */
+.contact {
+    position: relative;
+    text-align: center;
+    padding: 40px 24px 80px;
+    overflow: hidden
+}
+
+.curve {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: min(420px, 60%);
+    opacity: .9
+}
+
+.contact h2 {
+    font-size: clamp(3rem, 11vw, 7rem);
+    margin-bottom: 36px;
+    color: var(--white)
+}
+
+.contact .strip {
+    display: block;
+    width: fit-content;
+    margin: 8px auto;
+    font-size: 1.1rem
+}
+
+.mail {
+    text-decoration: none
+}
+
+.social {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    margin-top: 28px;
+    color: var(--blue)
+}
+
+.social a {
+    text-decoration: none;
+    border-bottom: 2px solid var(--blue)
+}
+
+.social a:hover {
+    color: var(--amber);
+    border-color: var(--amber)
+}
+
+.foot.end {
+    border-top: 1px solid rgba(145, 167, 208, .25);
+    margin: 0 auto;
+    max-width: 1000px;
+    padding-bottom: 28px
+}
+
+/*boton regresar arriba*/
+.button-backtop {
+    position: fixed !important;
+    right: 24px !important;
+    bottom: 24px !important;
+    left: auto !important;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(rgb(213, 203, 255), rgb(235, 252, 252));
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0px 0px 0px 4px rgba(174, 160, 255, 0.253);
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 9999;
+
+    /* Oculto inicialmente */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(15px);
+
+    transition: all 0.3s ease;
+}
+
+/* MOSTRAR BOTÓN */
+.button-backtop.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+}
+
+.svgIcon path {
+    fill: #7a18e5;
+}
+
+.button-backtop:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: #7a18e5;
+    align-items: center;
+}
+
+.button-backtop:hover .svgIcon {
+    /* width: 20px; */
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+}
+
+.button-backtop::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Regresar";
+    font-family: "DM Sans";
+    color: #7a18e5;
+    /* transition-duration: .3s; */
+    font-size: 0px;
+}
+
+.button-backtop:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    /* transform: translateY(-30px); */
+    transition-duration: 0.3s;
+}
+
+
+@media (max-width:720px) {
+    .meta {
+        padding: 14px 18px;
+        font-size: .8rem
+    }
+
+    .years {
+        display: none
+    }
+
+    .proj,
+    .proj:nth-of-type(even),
+    .about .sheet {
+        grid-template-columns: 1fr
+    }
+
+    .proj:nth-of-type(even) .slot {
+        order: 0
+    }
+
+    .about .sheet {
+        padding: 36px 24px;
+        gap: 36px
+    }
+
+    .portrait {
+        max-width: 260px
+    }
+
+    .chg {
+        opacity: 1
+    }
+}
+
+@media (prefers-reduced-motion:reduce) {
+    * {
+        transition: none !important;
+        scroll-behavior: auto
+    }
+}
