@@ -101,12 +101,16 @@
 }
 
 .slot-hor-semi {
-
     display: block;
     position: relative;
     width: 100%;
     aspect-ratio: 12/6;
+}
 
+.slot-iframe {
+    position: relative;
+    width: 100%;
+    background-color: white !important;
 }
 
 .slot video {
@@ -159,7 +163,7 @@
     color: #2456A6;
 }
 
-.tag-tipo.ilustracion {
+.tag-tipo.proyecto {
     background: #F2DDFB;
     color: #873FA1;
 }
@@ -273,7 +277,47 @@
     transition: transform 1s cubic-bezier(.2, .8, .2, 1);
 }
 
-/* RESPONSIVE */
+/*Boton redirigir a pagina l&l studios*/
+.btn-llstudios {
+    cursor: pointer;
+    font-weight: 700;
+    max-width: 190px;
+    font-family: 'DM Sans' !important;
+    transition: all 0.2s;
+    padding: 10px 20px;
+    border-radius: 100px;
+    background: #d93030;
+    border: 1px solid transparent;
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    align-items: center;
+    font-size: 15px;
+    text-decoration: none;
+    transition: transform 0.3s ease-in;
+}
+
+.btn-llstudios:hover {
+    background: linear-gradient(#d93030, #ef8e3d);
+}
+
+.text {
+    color: #fff;
+}
+
+.btn-llstudios>svg {
+    width: 34px;
+    margin-left: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-llstudios:hover svg {
+    transform: translateX(5px);
+}
+
+.btn-llstudios:active {
+    transform: scale(0.95);
+}
 
 
 /* RESPONSIVE */
